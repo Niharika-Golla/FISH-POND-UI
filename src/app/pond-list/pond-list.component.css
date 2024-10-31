@@ -1,0 +1,173 @@
+/* Flexbox container for cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if screen width is limited */
+  justify-content: flex-start; /* Aligns cards to the left */
+}
+
+/* Common styling for Pond Cards */
+.pond-card, .add-pond-card {
+  width: 220px; /* Adjusted width for a clean, compact look */
+  border: 1px solid #e0e0e0; /* Subtle border for formality */
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+}
+
+/* Add a subtle hover effect */
+.pond-card:hover, .add-pond-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the Add Pond Button Card */
+.add-pond-card {
+  background-color: #f4f6f8;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-pond-card:hover {
+  background-color: #e9ecef; /* Slight color change on hover */
+}
+
+/* Plus icon for Add Pond card */
+.add-pond-card .plus-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin: 0;
+}
+
+/* Styling for Pond Card contents */
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Overlay for Centered Form */
+.add-pond-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it appears on top */
+}
+
+/* Formal styling for Add Pond Form Container */
+.add-pond-form-container {
+  max-width: 500px;
+  padding: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Form Header */
+.add-pond-form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* Form Field Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button styling within the form */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
