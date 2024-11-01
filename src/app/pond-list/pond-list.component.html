@@ -1,17 +1,10 @@
 <div class="container-fluid">
   <!-- Show Sensor View if sensorView is true -->
   <div *ngIf="sensorView">
-    <button class="btn btn-secondary mb-3 back-button" (click)="backToPonds()"></button>
+    <button class="btn btn-secondary mb-3 back-button" (click)="backToPonds()">←</button>
     <div class="sensor-container">
       <div class="sensor-card" *ngFor="let sensor of sensors">
-        <!-- Icon based on sensor type -->
-        <div class="sensor-icon">
-          <i *ngIf="sensor.type === 'pH Sensor'" class="fa-solid fa-flask"></i>
-          <i *ngIf="sensor.type === 'Temperature Sensor'" class="fa-solid fa-temperature-high"></i>
-          <i *ngIf="sensor.type === 'Rain Sensor'" class="fa-solid fa-cloud-rain"></i>
-          <i *ngIf="sensor.type === 'Oxygen Sensor'" class="fa-solid fa-wind"></i>
-          <i *ngIf="sensor.type === 'Water Level Sensor'" class="fa-solid fa-water"></i>
-        </div>
+        <!-- Sensor Information -->
         <div class="sensor-info">
           <h6 class="sensor-type">{{ sensor.type }}</h6>
           <p class="sensor-value">Value: {{ sensor.value }}</p>
@@ -25,6 +18,11 @@
     <div class="card-container">
       <!-- Existing Pond Cards -->
       <div class="card pond-card" *ngFor="let pond of ponds">
+        <!-- Image at the top of the Pond Card -->
+        <img
+          src="https://tse3.mm.bing.net/th?id=OIP.YqNCggT_7hik_Ic_VZXvjgHaE6&pid=Api&P=0&h=180"
+          alt="Pond Image"
+        />
         <div class="card-body">
           <h5 class="card-title">{{ pond.name }}</h5>
           <p class="card-text">Pond ID: {{ pond.id }}</p>
