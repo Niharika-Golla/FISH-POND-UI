@@ -1,18 +1,23 @@
+/* Overall Container */
+.container-fluid {
+  padding: 20px;
+}
+
 /* Flexbox container for cards */
 .card-container {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; /* Allows cards to wrap to the next line if screen width is limited */
-  justify-content: flex-start; /* Aligns cards to the left */
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-/* Common styling for Pond Cards */
+/* Pond and Add Pond Cards Styling */
 .pond-card, .add-pond-card {
-  width: 220px; /* Adjusted width for a clean, compact look */
-  border: 1px solid #e0e0e0; /* Subtle border for formality */
+  width: 220px;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -21,13 +26,12 @@
   cursor: pointer;
 }
 
-/* Add a subtle hover effect */
 .pond-card:hover, .add-pond-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Styling for the Add Pond Button Card */
+/* Add Pond Button Card */
 .add-pond-card {
   background-color: #f4f6f8;
   justify-content: center;
@@ -35,17 +39,16 @@
 }
 
 .add-pond-card:hover {
-  background-color: #e9ecef; /* Slight color change on hover */
+  background-color: #e9ecef;
 }
 
-/* Plus icon for Add Pond card */
-.add-pond-card .plus-icon {
+.plus-icon {
   font-size: 2.5rem;
   color: #007bff;
   margin: 0;
 }
 
-/* Styling for Pond Card contents */
+/* Pond Card Contents */
 .card-body {
   text-align: center;
 }
@@ -63,6 +66,67 @@
   margin-bottom: 15px;
 }
 
+/* Sensor Container for Sensor Cards */
+.sensor-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Sensor Card Styling with Aqua Background */
+.sensor-card {
+  width: 180px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #e0f7fa; /* Aqua background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon Styling for Each Sensor */
+.sensor-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+/* Sensor Information */
+.sensor-info {
+  text-align: center;
+}
+
+.sensor-type {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin: 8px 0;
+}
+
+.sensor-value {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Back Button with Arrow Icon */
+.back-button {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #007bff;
+}
+
 /* Overlay for Centered Form */
 .add-pond-form-overlay {
   position: fixed;
@@ -70,11 +134,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensures it appears on top */
+  z-index: 1000;
 }
 
 /* Formal styling for Add Pond Form Container */
@@ -84,7 +148,7 @@
   border: 1px solid #cccccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
